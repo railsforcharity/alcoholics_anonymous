@@ -1,14 +1,28 @@
 .row
   .span12
     .hero-unit
-      = render :partial => 'shared/text_logo'
-      %br
-      %br
-      %br
-      %div(style="text-align:center;valign:middle")
-        %h2 Alcoholics Anonymous
-        %p Helping Alcoholics Recover
-        .clearfix
+      .span4.well.logo_text(style="text-align:center")
+        %span(style='color:red;font-size:200px;line-height:300px') A
+        %span(style='color:green;font-size:200px') A
+      .span7
+        %div(style="text-align:center;valign:middle")
+          %h2 Alcoholics Anonymous
+          %p.sub_title Helping Alcoholics Recover
+          %p.small_p
+            I am responsible...
+            %br
+            When anyone, anywhere
+            %br
+            reaches out for help,
+            %br
+            I want the hand of A.A.
+            %br
+            always to be there...
+            %br
+            And for that
+            %br
+            I am responsible
+      .clearfix
 
 .row
   .span12
