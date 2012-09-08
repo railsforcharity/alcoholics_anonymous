@@ -58,5 +58,9 @@ module AlcoholicsAnonymous
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Ref: http://chriseppstein.github.com/blog/2010/02/08/haml-sucks-for-content/
+    # If not for this option, haml adds an extra indent in pre tags which are used in central locations page
+    Haml::Template.options[:ugly] = true
   end
 end
