@@ -15,11 +15,13 @@
     %li= link_to "Press Release", press_path
 
   %ul.pull-right.nav
-    .btn-group
-      %a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
-        Contact Us
-        %span.caret
-      %ul.dropdown-menu
-        %li= link_to "Email", contact_path
-        %li= link_to t('views.layouts._navigation.locations'), locations_path
-        %li= link_to t('views.layouts._navigation.central_offices'), central_offices_path
+    %li= link_to "Contact Us", contact_path
+    %li
+      .btn-group
+        %a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
+          Locations
+          %span.caret
+        %ul.dropdown-menu
+          %li= link_to t('views.layouts._navigation.in_india'), locations_path
+          %li= link_to t('views.layouts._navigation.outside_india'), locations_path
+          %li= link_to t('views.layouts._navigation.central_offices'), central_offices_path
