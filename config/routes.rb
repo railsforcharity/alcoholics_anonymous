@@ -2,7 +2,7 @@ AlcoholicsAnonymous::Application.routes.draw do
 
   root :to => 'static_pages#home'
 
-  ['locations', 'is_aa_for_you', 'contact', 'press', 'contact_us', 'about'].each do |route|
+  ['locations', 'is_aa_for_you', 'contact', 'press', 'contact_us', 'about', 'central_offices', 'policy', 'messages'].each do |route|
     get route => "static_pages##{route}"
   end
 
