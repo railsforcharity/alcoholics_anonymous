@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  layout 'locations', :only => [:in_india, :outside_india, :central_offices]
+
   def contact
     @contact_us = ContactUs.new(:id => 1)
   end
@@ -12,5 +15,14 @@ class StaticPagesController < ApplicationController
       flash[:error] = t('controllers.static_pages.contact_us.failure')
       render 'contact'
     end
+  end
+
+  def in_india
+  end
+
+  def outside_india
+  end
+
+  def central_offices
   end
 end

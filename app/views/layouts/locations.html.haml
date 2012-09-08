@@ -1,0 +1,23 @@
+!!!
+%html
+  = render 'shared/head'
+
+  %body
+    %header
+    .navbar.navbar-fixed-top
+      %nav.navbar-inner
+        .container
+          = render 'shared/navigation'
+    .container
+      = render 'shared/messages'
+      .row
+        .span12
+          %ul.nav.nav-tabs
+            %li(class="#{'active' if params[:action] == 'in_india'}")
+              =link_to "In India", in_india_path
+            %li(class="#{'active' if params[:action] == 'outside_india'}")
+              =link_to "Outside India", outside_india_path
+            %li(class="#{'active' if params[:action] == 'central_offices'}")
+              =link_to "Central Offices", central_offices_path
+
+      =yield
