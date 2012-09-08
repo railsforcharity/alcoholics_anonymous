@@ -7,23 +7,19 @@
   %span(style='color:green') Anonymous
 .nav-collapse
   %ul.pull-left.nav
-    %li
-      = link_to t('views.layouts._navigation.home'), root_path
-    %li
-      = link_to "Is AA for You?", is_aa_for_you_path
-    %li
-      = link_to "PR Policy", policy_path
-    %li
-      = link_to "Messages", messages_path
-    %li
-      = link_to "FAQ's", faq_path
-    %li
-      = link_to "Press Release", press_path
+    %li= link_to t('views.layouts._navigation.home'), root_path
+    %li= link_to "Is AA for You?", is_aa_for_you_path
+    %li= link_to "PR Policy", policy_path
+    %li= link_to "Messages", messages_path
+    %li= link_to "FAQ's", faq_path
+    %li= link_to "Press Release", press_path
 
   %ul.pull-right.nav
-    %li.dropdown
-      %a.dropdown-toggle(href='#' data-toggle='dropdown') Contact Us
-      %ul.dropdown-menu(aria-labelledby='dLabel' role='menu')
+    .btn-group
+      %a.btn.dropdown-toggle(data-toggle="dropdown" href="#")
+        Contact Us
+        %span.caret
+      %ul.dropdown-menu
         %li= link_to "Email", contact_path
         %li= link_to t('views.layouts._navigation.locations'), locations_path
         %li= link_to t('views.layouts._navigation.central_offices'), central_offices_path
