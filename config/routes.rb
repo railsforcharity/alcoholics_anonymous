@@ -1,11 +1,10 @@
 AlcoholicsAnonymous::Application.routes.draw do
 
   root :to => 'static_pages#home'
-  match 'locations' => 'static_pages#locations'
-  match 'is_aa_for_you' => 'static_pages#is_aa_for_you'
-  match 'contact' => 'static_pages#contact'
-  match 'press' => 'static_pages#press'
-  match 'contact_us' => 'static_pages#contact_us'
+
+  ['locations', 'is_aa_for_you', 'contact', 'press', 'contact_us', 'about'].each do |route|
+    get route => "static_pages##{route}"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
