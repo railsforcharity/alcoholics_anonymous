@@ -1,0 +1,29 @@
+%a.btn.btn-navbar(data-target='.nav-collapse' data-toggle='collapse')
+  %span.icon-bar
+  %span.icon-bar
+  %span.icon-bar
+%a(href='/' class='brand')
+  %span(style='color:red') Alcoholics
+  %span(style='color:green') Anonymous
+.nav-collapse
+  %ul.pull-left.nav
+    %li
+      = link_to t('views.layouts._navigation.home'), root_path
+    %li
+      = link_to t('views.layouts._navigation.locations'), locations_path
+    %li
+      = link_to "Is AA for You?", is_aa_for_you_path
+    %li
+      = link_to "About Us", locations_path
+    %li
+      = link_to "PR Policy", locations_path
+    %li
+      = link_to "Messages", locations_path
+    %li
+      = link_to "FAQ's", locations_path
+    %li
+      = link_to "Central Offices", locations_path
+    %li
+      = link_to "Press Release", press_path
+    %li
+      = link_to "Contact Us", contact_path

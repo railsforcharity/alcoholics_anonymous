@@ -1,0 +1,50 @@
+.row
+  .span8
+    %h3
+      %span.slash //
+      Get in Touch
+    %p
+      We want to hear from you! Just enter your name, email address, and message into the form below and send email.
+    %br
+    %h3
+      %span.slash //
+      Send a Message
+    = simple_form_for @contact_us, :url => { :action => 'contact_us' }, :validate => true do |f|
+      = f.input :name, :label => 'Your name'
+      = f.input :email, :label => 'Your email'
+      = f.input :description, :label => 'Details', :as => 'text', :input_html => { :style => 'width: 90%', :rows => 10 }
+      = f.button :submit, "Submit", :class => 'btn btn-primary'
+
+  .span4
+    .sidebar.well
+      %h3
+        %span.slash //
+        Contact Details
+      %p
+        %strong Address
+        %br General Service Office of India
+        Room No 1, 2 & 3, Municipal English School
+        Meghraj Sethi Marg
+        Behind Fire Brigade
+        Byculla West, Mumbai 400008
+        %br
+        %br
+        %b Phone:
+        91-22-2307 5134
+        %br
+        %b Helpline:
+        91-22-2301 6767
+        %br
+        %b Fax:
+        91-22-2301 1517
+        %br
+        %b Twitter:
+        %a{:href => "http://twitter.com/AlcoholicsAnonymous", :target => "_blank"}
+          @AlcoholicsAnonymous
+        %br
+        %b Email: gsoindia@gmail.com
+    %br
+    %iframe{:frameborder => "0", :height => "260", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Meghraj+Sethi+Marg,+Byculla+Mumbai,+400008&aq=&sll=18.978093,72.830858&sspn=0.01183,0.019205&ie=UTF8&hq=&hnear=Meghraj+Sethi+Marg,+Mumbai,+Maharashtra,+India&ll=18.978093,72.830858&spn=0.01183,0.019205&t=m&z=14&iwloc=A&output=embed", :width => "100%"}
+    %br
+    %small
+      %a{:href => "https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Meghraj+Sethi+Marg,+Byculla+Mumbai,+400008&aq=&sll=18.978093,72.830858&sspn=0.01183,0.019205&ie=UTF8&hq=&hnear=Meghraj+Sethi+Marg,+Mumbai,+Maharashtra,+India&ll=18.978093,72.830858&spn=0.01183,0.019205&t=m&z=14&iwloc=A", :style => "color:#0000FF;text-align:left"} View Larger Map

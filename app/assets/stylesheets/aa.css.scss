@@ -1,0 +1,17 @@
+@import "compass";
+
+body {
+  font: 13px/1.7em 'Open Sans';
+}
+
+.hero-unit {
+  padding: 15px;
+
+  img {
+    float: left;
+    display: inline;
+  }
+  h1, p {
+    color: #e36b23;
+  }
+}
